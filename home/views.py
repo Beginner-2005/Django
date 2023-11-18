@@ -13,8 +13,10 @@ def about(request):
     return render(request, 'about.html')
 
 def contact(request):
+    views = {}
+    views['contact_info'] = SiteInfo.objects.all()
 
-    return render(request, 'contact.html')
+    return render(request, 'contact.html', views)
 
 def portfolio(request):
 
