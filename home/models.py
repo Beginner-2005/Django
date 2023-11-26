@@ -38,3 +38,27 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+class Price(models.Model):
+    rank = models.IntegerField()
+    name = models.CharField(max_length=200)
+    used_for = models.CharField(max_length=300)
+    row_1 = models.CharField(max_length=300)
+    row_2 = models.CharField(max_length=300)
+    row_3 = models.CharField(max_length=300)
+    price = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+
+class Expertness(models.Model):
+    name = models.CharField(max_length=100)
+    percentage = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+
+
+
